@@ -1,14 +1,16 @@
 <?php
 
+require_once '../config.php';
+
 /**
  * Your database authentication information goes here
  * @see http://dbv.vizuina.com/documentation/
  */
-define('DB_HOST', 'localhost');
-define('DB_PORT', 3306);
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'test');
+define('DB_HOST', $config->db->host);
+define('DB_PORT', '3306');
+define('DB_USERNAME', $config->db->user);
+define('DB_PASSWORD', $config->db->password);
+define('DB_NAME', $config->db->database);
 
 /**
  * Authentication data for access to DBV itself
@@ -30,7 +32,7 @@ define('DBV_ROOT_PATH', dirname(__FILE__));
  * Only edit this lines if you want to place your schema files in custom locations
  * @see http://dbv.vizuina.com/documentation/#optional-settings
  */
-define('DBV_DATA_PATH', DBV_ROOT_PATH . DS . 'data');
+define('DBV_DATA_PATH', DBV_ROOT_PATH . DS . '../dbv_data');
 define('DBV_SCHEMA_PATH', DBV_DATA_PATH . DS . 'schema');
 define('DBV_REVISIONS_PATH', DBV_DATA_PATH . DS . 'revisions');
 define('DBV_META_PATH', DBV_DATA_PATH . DS . 'meta');
