@@ -17,8 +17,8 @@ define('DB_NAME', $config->db->database);
  * If you leave any of the two constants below blank, authentication will be disabled
  * @see http://dbv.vizuina.com/documentation/#optional-settings
  */
-define('DBV_USERNAME', 'dbv');
-define('DBV_PASSWORD', 'dbv');
+define('DBV_USERNAME', $config->db->user);
+define('DBV_PASSWORD', $config->db->password);
 
 /**
  * @see http://dbv.vizuina.com/documentation/#writing-adapters
